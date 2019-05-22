@@ -1,109 +1,271 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section><h1>BPD Interim Report</h1>
-					<p>
-						<small>Christopher Kok Yong En<br>Supervisor: Dr Raj</small>
-					</p>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>reveal.js</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+	<link rel="stylesheet" href="css/custom.css">
+	
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+	
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<s class="slides">
+			<section><h1>BPD Interim Report</h1>
+				<p>
+					<large>Christopher Kok Yong En<br>Supervisor: Dr Raj</large>
+				</p>
+			</section>
+			<section><h2>Project Title</h2>
+				<large>Automated Classification of Arrhythmic Heartbeats using Deep Learning Technique.</large>
+			</section>
+			<section>
+				<section><h2>Arrhythmia</h2></section>
+				<section><h3>Definition</h3>
 				</section>
-				<section><h2>Project Title</h2>
-					<small>Automated Classification of Arrhythmic Heartbeats using Deep Learning Technique.</small>
+				<section><h3>Classifications</h3>
+					<ul>
+						<li>Non-Ectopic (N)</li>
+						<li>Supraventricular Ectopic (S)</li>
+						<li>Ventricular Ectopic (V)</li>
+						<li>Fusion (F)</li>
+						<li>Unknown (Q)</li>
+					</ul>
+					<br>
+					<br>
+					<small>Beat classification according to the Association for the Advancement of Medical Instrumentation (AAMI)</small>					
 				</section>
 				<section>
-					<section><h2>Arrhythmia</h2></section>
-					<section><h3>Definition</h3>
-					</section>
-					<section><h3>Classifications</h3>
-						<ul>
-							<li>Non-Ectopic (N)</li>
-							<li>Supraventricular Ectopic (S)</li>
-							<li>Ventricular Ectopic (V)</li>
-							<li>Fusion (F)</li>
-							<li>Unknown (Q)</li>
-						</ul>
-					</section>
-					<section>
-						<img class="stretch" data-src="images/normal_vs_cad.png">
-					</section>
-					<section><h3>WHO Statistics</h3>
-						<p>
-							<blockquote cite>
-								33.5 million people worldwide -- or .5% of the world's population -- have the condition [Atrial Fibrillation].
-							</blockquote>
-						</p>
-					</section>
-					<section><h3>Current Detection Methods</h3>
-						<ul>
-							<li class="fragment">Manual Detection
+					<img class="stretch" data-src="images/normal_vs_cad.png">
+				</section>
+				<section><h3>WHO Statistics</h3>
+					<p>
+						<blockquote cite>
+							33.5 million people worldwide -- or .5% of the world's population -- have the condition [Atrial Fibrillation].
+						</blockquote>
+					</p>
+				</section>
+				<section><h3>Current Detection Methods</h3>
+					<ul>
+						<li class="fragment">Manual Detection
 							<ul class="fragment">
 								<li>Time Consuming</li>
 								<li>Prone to Human Error</li>
 							</ul>
 							<li class="fragment">Computer Aided Diagnosis
-							<ul class="fragment">
-								<li>Can process multiple batches of data simultaneously</li>
-								<li>Requires much data to train accurately</li>
+								<ul class="fragment">
+									<li>Can process multiple batches of data simultaneously</li>
+									<li>Requires much data to train accurately</li>
+								</ul>
 							</ul>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section><h2>Computer Aided Diagnosis</h2></section>
-					<section><h3>Machine Learning</h3>
-						<ol class="fragment">
-							<li>Detect Features</li>
-							<li>Extract Features</li>
-							<li>Model Compilation & Training</li>
-							<li>Validation</li>
-						</ol>
+						</section>
 					</section>
 					<section>
-						<img style="background-color:white" class="stretch" data-src="https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png">
-						<small>Taken from: <a href="https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png">https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png</a></small>
+						<section><h2>Computer Aided Diagnosis</h2></section>
+						<section><h3>Machine Learning</h3>
+							<ol class="fragment">
+								<li>Detect Features</li>
+								<li>Extract Features</li>
+								<li>Model Compilation & Training</li>
+								<li>Validation</li>
+							</ol>
+						</section>
+						<section>
+							<img style="background-color:white" class="stretch" data-src="https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png">
+							<small>Taken from: <a href="https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png">https://machinelearningblogcom.files.wordpress.com/2017/11/bildschirmfoto-2017-11-09-um-16-36-191.png</a></small>
+						</section>
+						<section><h3>Deep Learning</h3>
+							<img style="background-color:white" class="stretch" data-src="https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png">
+							<small>Taken from: <a href="https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png">https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png</a></small>
+						</section>
 					</section>
-					<section><h3>Deep Learning</h3>
-						<img style="background-color:white" class="stretch" data-src="https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png">
-						<small>Taken from: <a href="https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png">https://cdn-images-1.medium.com/max/1600/1*dnvGC-PORSoCo7VXT3PV_A.png</a></small>
+					<section>
+						<section><h2>Methodology</h2></section>
+						<section><h3>Data Used</h3>
+							<p>Physionet MITDB Arrhythmia Database</p>
+						</section>
+						<section><h4>Beat Classifications</h4>
+							<img class="stretch" data-src="images/beat_classes.png">
+						</section>
+						<section><h4>Beat Classifications Count</h4>
+							<table>
+								<thead>
+									<tr>
+										<th>Beat Type</th>
+										<th>Beat Quantity</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Non-Ectopic (N)</td>
+										<td>90, 631</td>
+									</tr>
+									<tr>
+										<td>Supraventricular Ectopic (S)</td>
+										<td>2, 781</td>
+									</tr>
+									<tr>
+										<td>Ventricular Ectopic (V)</td>
+										<td>7, 256</td>
+									</tr>
+									<tr>
+										<td>Fusion (F)</td>
+										<td>803</td>
+									</tr>
+									<tr>
+										<td>Unknown (Q)</td>
+										<td>1, 015</td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+						<section><h4>Data Augmentation and Synthesis</h4>
+							<div class="fragment-stack stretch">
+								<img class="fragment step-fade-in-then-out" data-src="images/Data Flow Block Diagram.svg">
+								<img class="fragment step-fade-in-then-out" data-src="images/augmentation.png">
+							</div>
+						</section>
+						<section><h3>Convolutional Neural Network (CNN)</h3>
+							<img class="stretch" data-src="images/AlexNet-CNN-architecture-layers.png">
+							<p>
+								<small>AlexNet CNN Architecture (Pedraza et al., 2017)</small>
+							</p>
+						</section>
+						<section><h4>Definition</h4></section>
+						<section><h4>Temporal Convolutional Network (TCN)</h4>
+							<img class="stretch" data-src="images/Dilated_Conv.png">
+							<p>
+								<small>Visualization of a stack of dilated causal convolutional layers (Wavenet, 2016)</small>
+							</p>
+						</section>
+						<section><h4>Model Architecture</h4></section>
+						<section><h5>TCN Block</h5>
+							<img class="stretch" data-src="images/ADAMWR5_block.svg">
+						</section>
+						<section><h5>Complete Architecture</h5>
+							<img class="stretch" data-src="images/ADAMWR5_archi.svg">
+						</section>
+					</section>
+					<section><section><h2>Results</h2></section>
+					<section><h3>Confusion Matrix</h3>
+						<img class="stretch" data-src="images/cnf_mat_interim.png">
+					</section>
+					<section>
+						<table class="stretch">
+							<tr>
+								<th colspan="2" rowspan="2"></th>
+								<th colspan="5">Predicted</th>
+								<th rowspan="2">acc (%)</th>
+								<th rowspan="2">ppv (%)</th>
+								<th rowspan="2">sen (%)</th>
+								<th rowspan="2">spec (%)</th>
+							</tr>
+							<tr>
+								<td>N</td>
+								<td>V</td>
+								<td>S</td>
+								<td>Q</td>
+								<td>F</td>
+							</tr>
+							<tr>
+								<td rowspan="5">Original</td>
+								<td>N</td>
+								<td>20098</td>
+								<td>3018</td>
+								<td>12568</td>
+								<td>2746</td>
+								<td>6861</td>
+								<td>88.77</td>
+								<td>99.17</td>
+								<td>44.38</td>
+								<td>99.53</td>
+							</tr>
+							<tr>
+								<td>V</td>
+								<td>66</td>
+								<td>44644</td>
+								<td>142</td>
+								<td>40</td>
+								<td>399</td>
+								<td>80.55</td>
+								<td>93.50</td>
+								<td>98.57</td>
+								<td>85.98</td>
+							</tr>
+							<tr>
+								<td>S</td>
+								<td>101</td>
+								<td>60</td>
+								<td>45106</td>
+								<td>22</td>
+								<td>2</td>
+								<td>93.95</td>
+								<td>78.02</td>
+								<td>99.59</td>
+								<td>85.72</td>
+							</tr>
+							<tr>
+								<td>Q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>45291<br></td>
+								<td>0</td>
+								<td>98.62</td>
+								<td>94.16</td>
+								<td>100.00</td>
+								<td>85.62</td>
+							</tr>
+							<tr>
+								<td>F</td>
+								<td>1</td>
+								<td>26</td>
+								<td>0</td>
+								<td>0</td>
+								<td>45264</td>
+								<td>96.49</td>
+								<td>86.17</td>
+								<td>99.94</td>
+								<td>85.63</td>
+							</tr>
+						</table>
+					</section>
+					<section><h3>Loss Function over Epoch</h3>
+						<img class="stretch" data-src="images/loss_interim.png">
+					</section>
+					<section><h3>Accuracy over Epoch</h3>
+						<img class="stretch" data-src="images/acc_interim.png">
 					</section>
 				</section>
+				<section><h2>References</h2>
+					<ul class="stretch">
+						<li>Pedraza, A., Gallego, J., Lopez, S., Gonzalez, L., Laurinavicius, A., & Bueno, G. (2017). Glomerulus Classification with Convolutional Neural Networks. In Communications in Computer and Information Science (pp. 839–849). Springer International Publishing. https://doi.org/10.1007/978-3-319-60964-5_73</li>
+						<li>van den Oord, A., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., … Kavukcuoglu, K. (2016). WaveNet: A Generative Model for Raw Audio. Retrieved from http://arxiv.org/abs/1609.03499</li>
+					</ul>
+				</section>
 				<section>
-					<section><h2>Methodology</h2></section>
-					<section><h3>Data Used</h3>
-					<p>Physionet MITDB Arrhythmia Database</p>
-					</section>
-					<section><h3>Beat Classifications</h3>
-						<img class="stretch" data-src="images/beat_classes.png">
-					</section>
+					<h2>Q&A</h2>
 				</section>
 			</div>
 		</div>
-
+		
 		<script src="js/reveal.js"></script>
-
+		
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
@@ -111,16 +273,34 @@
 			Reveal.initialize({
 				hash: true,
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'bower_components/reveal.js-plugins/anything/anything.js', async: true }
+				],
+				anything: [ 
+				{
+					className: "random", 
+					defaults: {min: 0, max: 9}, 
+					initialize: (function(container, options){ 
+						container.innerHTML = Math.trunc( options.min + Math.random()*(options.max-options.min+1));
+					})
+				},
+				],
+				width: 1920,
+				height: 1080,
+				margin: 0.1
 			});
 			Reveal.configure({
 				slideNumber: true,
-				hash: true
+				hash: true,
+				progress: true,
+				center: true
 			});
 		</script>
 	</body>
-</html>
+	</html>
+	
