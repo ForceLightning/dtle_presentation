@@ -65,35 +65,31 @@
 						AFIB can be detected with Supraventricular Ectopic beats.
 					</aside>
 				</section>
-				<section><h2>Project Title</h2>
-					<small>Automated Classification of Arrhythmic Heartbeats using Deep Learning Technique.</small>
+				<section><h3>Classifications</h3>
+					<ul>
+						<li>Non-Ectopic (N)</li>
+						<li>Supraventricular Ectopic (S)</li>
+						<li>Ventricular Ectopic (V)</li>
+						<li>Fusion (F)</li>
+						<li>Unknown (Q)</li>
+					</ul>
+					<br>
+					<br>
+					<small>Beat classification according to the Association for the Advancement of Medical Instrumentation (AAMI)</small>					
 				</section>
 				<section>
-					<section><h2>Arrhythmia</h2></section>
-					<section><h3>Definition</h3>
-					</section>
-					<section><h3>Classifications</h3>
-						<ul>
-							<li>Non-Ectopic (N)</li>
-							<li>Supraventricular Ectopic (S)</li>
-							<li>Ventricular Ectopic (V)</li>
-							<li>Fusion (F)</li>
-							<li>Unknown (Q)</li>
-						</ul>
-					</section>
-					<section>
-						<img class="stretch" data-src="images/normal_vs_cad.png">
-					</section>
-					<section><h3>WHO Statistics</h3>
-						<p>
-							<blockquote cite>
-								33.5 million people worldwide -- or .5% of the world's population -- have the condition [Atrial Fibrillation].
-							</blockquote>
-						</p>
-					</section>
-					<section><h3>Current Detection Methods</h3>
-						<ul>
-							<li class="fragment">Manual Detection
+					<img class="stretch" data-src="images/normal_vs_cad.png">
+				</section>
+				<section><h3>WHO Statistics</h3>
+					<p>
+						<blockquote cite>
+							33.5 million people worldwide -- or .5% of the world's population -- have the condition [Atrial Fibrillation].
+						</blockquote>
+					</p>
+				</section>
+				<section><h3>Current Detection Methods</h3>
+					<ul>
+						<li class="fragment">Manual Detection
 							<ul class="fragment">
 								<li>Time Consuming</li>
 								<li>Prone to Human Error</li>
@@ -363,7 +359,9 @@
 			});
 			Reveal.configure({
 				slideNumber: true,
-				hash: true
+				hash: true,
+				progress: true,
+				center: true
 			});
 		</script>
 	</body>
