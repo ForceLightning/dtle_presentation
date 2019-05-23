@@ -40,7 +40,7 @@
 				</section>
 				<!-- <section><h3>Definition</h3>
 				</section> -->
-				<section><h3>Classifications</h3>
+				<section data-timing=40><h3>Classifications</h3>
 					<ul>
 						<li>Non-Ectopic (N)</li>
 						<li>Supraventricular Ectopic (S)</li>
@@ -65,7 +65,7 @@
 						AFIB can be detected with Supraventricular Ectopic beats.
 					</aside>
 				</section>
-				<section><h3>Current Detection Methods</h3>
+				<section data-timing=40><h3>Current Detection Methods</h3>
 					<ul>
 						<li class="fragment">Manual Detection
 							<ul class="fragment">
@@ -288,10 +288,14 @@
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'socket.io/socket.io.js', async: true },
+				{ src: 'plugin/notes-server/client.js', async: true },
 				{ src: 'plugin/highlight/highlight.js', async: true },
 				{ src: 'plugin/search/search.js', async: true },
 				{ src: 'plugin/zoom-js/zoom.js', async: true },
-				{ src: 'bower_components/reveal.js-plugins/anything/anything.js', async: true }
+				{ src: 'plugin/reveal.js-plugins/anything/anything.js', async: true },
+				{ src: 'plugin/reveal.js-menu/menu.js', async: true },
+				{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js' },
 				],
 				anything: [ 
 				{
@@ -302,15 +306,22 @@
 					})
 				},
 				],
+				menu: {
+					titleSelector: 'h1, h2, h3',
+					hideMissingTitles: true
+				},
 				width: 1920,
 				height: 1080,
-				margin: 0.1
+				margin: 0.1,
+				allottedTime: 10 * 60 * 1000,
 			});
 			Reveal.configure({
 				slideNumber: true,
 				hash: true,
 				progress: true,
-				center: true
+				center: true,
+				defaultTiming: (600 / Reveal.getTotalSlides()),
+				fragmentInURL: true
 			});
 		</script>
 	</body>

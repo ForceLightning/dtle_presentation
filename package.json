@@ -42,6 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "reveal.js-toolbar": "^0.1.5",
     "tar": "^4.4.8"
   }
 }

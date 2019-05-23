@@ -1,0 +1,12 @@
+[submodule "remeal"]
+	path = remeal
+	url = git@github.com:dmitry-korolev/remeal.git
+[submodule "notell"]
+	path = notell
+	url = https://github.com/ysmood/notell.git
+[submodule "plugin/reveal.js-menu"]
+	path = plugin/reveal.js-menu
+	url = https://github.com/denehyg/reveal.js-menu
+[submodule "plugin/reveal.js-toolbar"]
+	path = plugin/reveal.js-toolbar
+	url = https://github.com/denehyg/reveal.js-toolbar
