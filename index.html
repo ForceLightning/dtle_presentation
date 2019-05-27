@@ -26,7 +26,7 @@
 <body>
 	<div class="reveal">
 		<s class="slides">
-			<section><h1>BPD Interim Report</h1>
+			<section><h1>BPD Interim Presentation</h1>
 				<p>
 					<large>Christopher Kok Yong En<br>Supervisor: Dr Raj</large>
 				</p>
@@ -144,9 +144,9 @@
 							</table>
 						</section>
 						<section><h4>Data Augmentation and Synthesis</h4>
-							<div class="fragment-stack stretch">
+							<div class="fragment-stack">
 								<img class="fragment step-fade-in-then-out" data-src="images/Data Flow Block Diagram.svg">
-								<img class="fragment step-fade-in-then-out" data-src="images/augmentation.png">
+								<img class="fragment stretch" data-src="images/augmentation.png">
 							</div>
 						</section>
 						<section><h3>Convolutional Neural Network (CNN)</h3>
@@ -177,7 +177,7 @@
 					<section><h3>Confusion Matrix</h3>
 						<img class="stretch" data-src="images/cnf_mat_interim.png">
 					</section>
-					<section>
+					<section><h3>Confusion Matrix (Table Form)</h3>
 						<table class="stretch">
 							<tr>
 								<th colspan="2" rowspan="2"></th>
@@ -256,6 +256,7 @@
 								<td>85.63</td>
 							</tr>
 						</table>
+						<small>acc = accuracy, ppv = positive predictive value, sen = sensitivity, spec = specificity</small>
 					</section>
 					<section><h3>Loss Function over Epoch</h3>
 						<img class="stretch" data-src="images/loss_interim.png">
@@ -287,25 +288,31 @@
 				dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'socket.io/socket.io.js', async: true },
+				// { src: 'plugin/notes/notes.js', async: true },
+				{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+				// { src: 'plugin/reveal.js-plugins/broadcast/socket.io.js'},
 				{ src: 'plugin/notes-server/client.js', async: true },
 				{ src: 'plugin/highlight/highlight.js', async: true },
 				{ src: 'plugin/search/search.js', async: true },
 				{ src: 'plugin/zoom-js/zoom.js', async: true },
 				{ src: 'plugin/reveal.js-plugins/anything/anything.js', async: true },
 				{ src: 'plugin/reveal.js-menu/menu.js', async: true },
-				{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js' },
+				{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js', async: false },
+				// { src: 'plugin/multiplex/client.js', async: true },
+				// { src: 'plugin/multiplex/master.js', async: true }
 				],
-				anything: [ 
-				{
+				anything: [{
 					className: "random", 
 					defaults: {min: 0, max: 9}, 
 					initialize: (function(container, options){ 
 						container.innerHTML = Math.trunc( options.min + Math.random()*(options.max-options.min+1));
 					})
-				},
-				],
+				}],
+				// multiplex: {
+				// 	url: 'localhost:1948',
+				// 	secret: '15589443179455001385',
+				// 	socketId: '7c6b116c5898ab03'
+				// },
 				menu: {
 					titleSelector: 'h1, h2, h3',
 					hideMissingTitles: true
@@ -314,6 +321,11 @@
 				height: 1080,
 				margin: 0.1,
 				allottedTime: 10 * 60 * 1000,
+				keyboard: {
+					82: () => {
+						ElapsedTimeBar.reset();
+					}
+				}
 			});
 			Reveal.configure({
 				slideNumber: true,
