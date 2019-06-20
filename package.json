@@ -43,6 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "reveal.js-toolbar": "^0.1.5",
+    "reveald3": "^1.5.4",
     "tar": "^4.4.8"
   }
 }
