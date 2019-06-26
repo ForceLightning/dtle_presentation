@@ -8,7 +8,7 @@
 
 	console.log( 'View slide notes at ' + window.location.origin + '/notes/' + socketId );
 
-	window.alert( window.location.origin + '/notes/' + socketId, 'notes-' + socketId );
+	// window.alert( window.location.origin + '/notes/' + socketId, 'notes-' + socketId );
 
 	/**
 	 * Posts the current slide data to the notes window
