@@ -10,3 +10,6 @@
 [submodule "plugin/reveal.js-toolbar"]
 	path = plugin/reveal.js-toolbar
 	url = https://github.com/denehyg/reveal.js-toolbar
+[submodule "viz"]
+	path = viz
+	url = git@github.com:ForceLightning/mri-viz.git
