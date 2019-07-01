@@ -1,140 +1,197 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
+
 	<title>DTLE Mini-Project Presentation</title>
-	
+
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 	<link rel="stylesheet" href="css/custom.css">
-	
+
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
-	
+
 	<!-- Printing and PDF exports -->
 	<script>
-		var link = document.createElement( 'link' );
+		var link = document.createElement('link');
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
 </head>
+
 <body>
 	<div class="reveal">
 		<s class="slides">
-			<section><h1>Magnetic Resonance Imaging (MRI) Scanners</h1>
+			<section>
+				<h1>Magnetic Resonance Imaging (MRI) Scanners</h1>
 				<h2>DTLE Mini-Project Presentation</h2>
 				<p>
 					<large>Christopher Kok Yong En</large>
 				</p>
 			</section>
-			<section><h2>Objectives</h2>
+			<section>
+				<h2>Objectives</h2>
 				<large>Automated Classification of Arrhythmic Heartbeats using Deep Learning Technique.</large>
 			</section>
-			<section><h2>Background</h2>
+			<section>
+				<h2>Background</h2>
 			</section>
 			<section>
-				<section><h2>Principles</h2></section>
-				<section><h3>Nuclear Magnetic Resonnance (Classical)</h3>
-					<iframe id="compass"
-					src="viz/nmr-compass/index.html"
-					style="height: 100vh; width: 100%"
-					loading="lazy"></iframe>
+				<section>
+					<h2>Principles</h2>
 				</section>
-				<section><h3>Nuclear Magnetic Resonance (Quantum)</h3>
-					<iframe id="test"
-					src="viz/nmr-spin/index.html"
-					style="height: 100vh; width: 100%"
-					loading="lazy"></iframe>
+				<section>
+					<h3>Nuclear Magnetic Resonnance (2D)</h3>
+					<iframe id="compass" data-src="viz/nmr-compass/index.html" style="height: 100vh; width: 100%"></iframe>
 				</section>
-				
+				<section>
+					<h3>Nuclear Magnetic Resonance (3D)</h3>
+					<iframe id="test" data-src="viz/nmr-spin/index.html" style="height: 100vh; width: 100%"></iframe>
+				</section>
 			</section>
-			<section><h2>References</h2>
+			<section>
+				<section>
+					<h2>Applications</h2>
+				</section>
+			</section>
+			<section>
+				<section><h2>Manufacturers</h2></section>
+			</section>
+			<section><h2>Conclusions</h2></section>
+			<section>
+				<h2>References</h2>
 				<ul>
-					<li>Pedraza, A., Gallego, J., Lopez, S., Gonzalez, L., Laurinavicius, A., & Bueno, G. (2017). Glomerulus Classification with Convolutional Neural Networks. In Communications in Computer and Information Science (pp. 839–849). Springer International Publishing. https://doi.org/10.1007/978-3-319-60964-5_73</li>
-					<li>van den Oord, A., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., … Kavukcuoglu, K. (2016). WaveNet: A Generative Model for Raw Audio. Retrieved from http://arxiv.org/abs/1609.03499</li>
+					<li>Pedraza, A., Gallego, J., Lopez, S., Gonzalez, L., Laurinavicius, A., & Bueno, G. (2017).
+						Glomerulus Classification with Convolutional Neural Networks. In Communications in Computer and
+						Information Science (pp. 839–849). Springer International Publishing.
+						https://doi.org/10.1007/978-3-319-60964-5_73</li>
+					<li>van den Oord, A., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves, A., … Kavukcuoglu,
+						K. (2016). WaveNet: A Generative Model for Raw Audio. Retrieved from
+						http://arxiv.org/abs/1609.03499</li>
 				</ul>
 			</section>
 			<section>
 				<h2>Q&A</h2>
 			</section>
-			</div>
-		</div>
-		
-		<script src="js/reveal.js"></script>
-		
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
-				// { src: 'plugin/reveal.js-plugins/broadcast/socket.io.js'},
-				{ src: 'plugin/notes-server/client.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true },
-				{ src: 'plugin/search/search.js', async: true },
-				{ src: 'plugin/zoom-js/zoom.js', async: true },
-				{ src: 'plugin/reveal.js-plugins/anything/anything.js', async: true },
-				{ src: 'plugin/reveal.js-menu/menu.js', async: true },
-				{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js', async: false },
-				{ src: 'plugin/multiplex/client.js', async: true },
-				// { src: 'plugin/multiplex/master.js', async: true }
-				{ src: 'plugin/reveald3/reveald3.js', async: true }
-				// { src: 'plugin/d3js/d3js.js' }
-				],
-				anything: [{
-					className: "random", 
-					defaults: {min: 0, max: 9}, 
-					initialize: (function(container, options){ 
-						container.innerHTML = Math.trunc( options.min + Math.random()*(options.max-options.min+1));
-					})
-				}],
-				// multiplex: {
-				// 	url: 'localhost:1948',
-				// 	secret: '15589443179455001385',
-				// 	socketId: '7c6b116c5898ab03'
-				// },
-				menu: {
-					titleSelector: 'h1, h2, h3',
-					hideMissingTitles: true
+	</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
 				},
-				width: 1920,
-				height: 1080,
-				margin: 0.1,
-				allottedTime: 10 * 60 * 1000,
-				keyboard: {
-					82: () => {
-						ElapsedTimeBar.reset();
-					}
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js',
+					async: true
+				},
+				// { src: 'plugin/reveal.js-plugins/broadcast/socket.io.js'},
+				{
+					src: 'plugin/notes-server/client.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true
+				},
+				{
+					src: 'plugin/search/search.js',
+					async: true
+				},
+				{
+					src: 'plugin/zoom-js/zoom.js',
+					async: true
+				},
+				{
+					src: 'plugin/reveal.js-plugins/anything/anything.js',
+					async: true
+				},
+				{
+					src: 'plugin/reveal.js-menu/menu.js',
+					async: true
+				},
+				{
+					src: 'plugin/elapsed-time-bar/elapsed-time-bar.js',
+					async: false
+				},
+				{
+					src: 'plugin/multiplex/client.js',
+					async: true
+				},
+				// { src: 'plugin/multiplex/master.js', async: true }
+				{
+					src: 'plugin/reveald3/reveald3.js',
+					async: true
 				}
-			});
-			Reveal.configure({
-				slideNumber: true,
-				hash: true,
-				progress: true,
-				center: true,
-				defaultTiming: (600 / Reveal.getTotalSlides()),
-				fragmentInURL: true
-			});
-			Reveal.configure({
-				slideNumber: true,
-				hash: true,
-				progress: true,
-				center: true,
-				// defaultTiming: (600 / Reveal.getTotalSlides()),
-				totalTime: 600,
-				fragmentInURL: true
-			});
-		</script>
-	</body>
-	</html>
-	
+				// { src: 'plugin/d3js/d3js.js' }
+			],
+			anything: [{
+				className: "random",
+				defaults: {
+					min: 0,
+					max: 9
+				},
+				initialize: (function (container, options) {
+					container.innerHTML = Math.trunc(options.min + Math.random() * (options.max -
+						options.min + 1));
+				})
+			}],
+			// multiplex: {
+			// 	url: 'localhost:1948',
+			// 	secret: '15589443179455001385',
+			// 	socketId: '7c6b116c5898ab03'
+			// },
+			menu: {
+				titleSelector: 'h1, h2, h3',
+				hideMissingTitles: true
+			},
+			width: 1920,
+			height: 1080,
+			margin: 0.1,
+			allottedTime: 7 * 60 * 1000,
+			keyboard: {
+				82: () => {
+					ElapsedTimeBar.reset();
+				}
+			}
+		});
+		Reveal.configure({
+			slideNumber: true,
+			hash: true,
+			progress: true,
+			center: true,
+			defaultTiming: (600 / Reveal.getTotalSlides()),
+			fragmentInURL: true
+		});
+		// Reveal.configure({
+		// 	slideNumber: true,
+		// 	hash: true,
+		// 	progress: true,
+		// 	center: true,
+		// 	// defaultTiming: (600 / Reveal.getTotalSlides()),
+		// 	totalTime: 600,
+		// 	fragmentInURL: true
+		// });
+	</script>
+</body>
+
+</html>
