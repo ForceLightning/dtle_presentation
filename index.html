@@ -43,12 +43,12 @@
 				<section>
 					<h2>Principles</h2>
 				</section>
-				<section>
+				<section data-timing=120>
 					<h3>Nuclear Magnetic Resonance (2D)</h3>
 					<iframe id="compass" data-src="viz/nmr-compass/index.html" style="height: 95vh; width: 100%"></iframe>
 					<small>Available on <a href="https://forcelightning.github.io/mri-viz/nmr-compass/">Github</a></small>
 				</section>
-				<section>
+				<section data-timing=120>
 					<h3>Nuclear Magnetic Resonance (3D)</h3>
 					<iframe id="test" data-src="viz/nmr-spin/index.html" style="height: 95vh; width: 100%"></iframe>
 					<small>
@@ -62,7 +62,7 @@
 				<section>
 					<h2>Applications</h2>
 				</section>
-				<section>
+				<section data-timing=90>
 					<h3>Medical Imaging</h3>
 					<ul>
 						<li>Neuroimaging</li>
@@ -224,23 +224,23 @@
 				}
 			}
 		});
-		Reveal.configure({
-			slideNumber: true,
-			hash: true,
-			progress: true,
-			center: true,
-			defaultTiming: (600 / Reveal.getTotalSlides()),
-			fragmentInURL: true
-		});
 		// Reveal.configure({
 		// 	slideNumber: true,
 		// 	hash: true,
 		// 	progress: true,
 		// 	center: true,
-		// 	// defaultTiming: (600 / Reveal.getTotalSlides()),
-		// 	totalTime: 600,
+		// 	defaultTiming: (3 * 60 / Reveal.getTotalSlides()),
 		// 	fragmentInURL: true
 		// });
+		Reveal.configure({
+			slideNumber: true,
+			hash: true,
+			progress: true,
+			center: true,
+			// defaultTiming: (600 / Reveal.getTotalSlides()),
+			totalTime: 420,
+			fragmentInURL: true
+		});
 	</script>
 </body>
 
