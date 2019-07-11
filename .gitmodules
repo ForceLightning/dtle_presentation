@@ -12,4 +12,4 @@
 	url = https://github.com/denehyg/reveal.js-toolbar
 [submodule "viz"]
 	path = viz
-	url = git@github.com:ForceLightning/mri-viz.git
+	url = https://github.com/ForceLightning/mri-viz.git
